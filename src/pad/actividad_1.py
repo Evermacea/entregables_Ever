@@ -1,8 +1,10 @@
 import json # Importamos la librería json
-import requests # Importamos la libreria requests
+import requests # Importamos la librería requests
+import sys # Importamos la librería os
 class Ingestiones():
     def __init__(self):
         self.ruta_static = "src/pad/static/"
+        sys.stdout.reconfigure(encoding='utf-8') # Configuramos la salida estándar para que acepte caracteres especiales
 
     def leer_api(self, ruta):
         response = requests.get(ruta) # Hacemos una petición GET a la API
