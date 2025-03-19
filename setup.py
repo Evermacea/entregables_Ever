@@ -11,6 +11,6 @@ setup(
         "pandas",
         "matplotlib",
         "plotly",  # Aquí debe ser "plotly", NO "plotly.express"
-        "requests"  # 📌 Agregamos requests aquí
+        "requests" # Agregamos requests aquí
     ],
 )
