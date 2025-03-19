@@ -10,6 +10,7 @@ setup(
     install_requires=[
         "pandas",
         "matplotlib",
-        "plotly"  # Aquí debe ser "plotly", NO "plotly.express"
+        "plotly",  # Aquí debe ser "plotly", NO "plotly.express"
+        "requests"  # 📌 Agregamos requests aquí
     ],
 )
