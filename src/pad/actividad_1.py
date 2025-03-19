@@ -1,5 +1,5 @@
 import json # Importamos la librería json
-import requests # Importamos la librería requests
+import requests # Importamos la libreria requests
 class Ingestiones():
     def __init__(self):
         self.ruta_static = "src/pad/static/"
