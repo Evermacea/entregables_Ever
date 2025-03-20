@@ -1,6 +1,6 @@
-import json # Importamos la librería json
-import requests # Importamos la librería requests
-import sys # Importamos la librería sys
+import json # Importamos la libreria json
+import requests # Importamos la libreria requests
+import sys # Importamos la libreria sys
 
 class Ingestiones():
     def __init__(self):
