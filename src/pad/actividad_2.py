@@ -238,7 +238,7 @@ class Actividad_2(): # Una sola dimensión
         plt.grid()
 
         # Guardar la imagen en la carpeta actividad_2
-        ruta_guardado = os.path.join(self.ruta_actividad_2, "grafico_seno_ruido_ejercicio_12.png")
+        ruta_guardado = os.path.join(self.ruta_actividad_2, "grafico_seno_ruido_ejercicio_12                                                                                                        .png")
         plt.savefig(ruta_guardado)
         plt.close()
 
