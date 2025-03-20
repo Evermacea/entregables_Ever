@@ -1,7 +1,5 @@
 from setuptools import setup, find_namespace_packages
 
-from setuptools import setup
-
 setup(
     name="pad",
     version="0.0.1",
@@ -12,9 +10,18 @@ setup(
     install_requires=[
         "pandas",
         "matplotlib",
-        "plotly",
-        "requests"  # Asegurar que 'requests' está aquí
+        "plotly",  # Aquí debe ser "plotly", NO "plotly.express"
+        "requests" # Agregamos requests aquí
     ],
-    zip_safe=False,
+    py_modules=["actividad_2"],
+    install_requires=[
+        "pandas",
+        "matplotlib",
+        "seaborn>=0.11.2",
+        "plotly",  
+        "requests",
+        "openpyxl",
+        "kagglehub[pandas-datasets]>=0.3.8",
+        "matplotlib>=3.5.0"
+    ],
 )
-
