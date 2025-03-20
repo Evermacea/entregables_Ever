@@ -13,7 +13,7 @@ setup(
         "pandas",
         "matplotlib",
         "plotly",
-        "requests"
+        "requests"  # Asegurar que 'requests' está aquí
     ],
     zip_safe=False,
 )

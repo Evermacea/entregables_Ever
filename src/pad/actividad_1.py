@@ -1,5 +1,5 @@
 import json # Importamos la libreria json
-import requests # Importamos la libreria requests
+import requests # Importamos requests
 import sys # Importamos la libreria sys
 
 class Ingestiones():
