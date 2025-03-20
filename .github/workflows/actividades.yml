@@ -28,6 +28,8 @@ jobs:
         run: pip install -e .
       - name: paso5 - Ejecutar Actividad 1
         run: python src/pad/actividad_1.py
+      - name: paso6 - Ejecutar Actividad 2
+        run: python src/pad/actividad_2.py
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
