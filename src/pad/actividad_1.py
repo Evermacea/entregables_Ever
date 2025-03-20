@@ -2,7 +2,7 @@ import json # Importamos la libreria json
 import requests # Importamos requests "el workflow no está reconociendo esta dependendcia"
 import sys # Importamos la libreria sys
 
-class Ingestiones():
+class Actividad_1():
     def __init__(self):
         self.ruta_static = "src/pad/static/"
         sys.stdout.reconfigure(encoding='utf-8') 
@@ -16,7 +16,7 @@ class Ingestiones():
         with open(ruta_json, mode="w", encoding="utf-8") as archivo:
             json.dump(datos, archivo, ensure_ascii=False)
 
-ingestion = Ingestiones() # Crear instancia de la clase
+ingestion = Actividad_1() # Crear instancia de la clase
 print(ingestion.ruta_static)
 
 datos_json = ingestion.leer_api("https://dattebayo-api.onrender.com/clans") # Llamamos a la función leer_api
