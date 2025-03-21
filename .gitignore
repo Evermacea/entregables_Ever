@@ -179,4 +179,4 @@ cython_debug/
 src/pad/static/json/*.json  #Esto es para ignorar el archivo json que se crea automáticamente con el código creado
 
 # Distribution / packaging
-.Python
+.Pythonsrc/pad/actividad_2/grafico_dispersion_ejercicio_11.png
