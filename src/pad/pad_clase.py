@@ -60,7 +60,7 @@ class Pad_clase:
 
             try:
                 df = pd.read_csv(file_path, encoding="utf-8")
-                print(f"Primeras filas del archivo {file}:\n{df.head()}")  # Imprime las primeras filas
+                print(f"Primeras filas del archivo {file}:{df.head()}")  # Imprime las primeras filas
                 df_list.append(df)  # Guardamos el DataFrame en la lista
                 print(f"CSV cargado correctamente: {file}")
             except Exception as e:
@@ -76,48 +76,48 @@ class Pad_clase:
 
 
     
-    def grafico_normal(self,df):
-        cantidad = len(df)
-        # cantidad = 209306
-        np.random.seed(0)
-        generados = np.random.randn(cantidad)
-        serie = pd.Series(generados)
-        df["random_g"] = serie
-        df.to_csv("dataset_nuevo.csv")
-        #plt.figure()
-        df["num_units"].plot(kind = 'barh')
-        #print(df["random_g"].describe())
-        #plt.show()
-        plt.savefig("grafico_normal_2_line.png")
-        #plt.legend(loc='datos aleatorios')
+    # def grafico_normal(self,df):
+    #     cantidad = len(df)
+    #     # cantidad = 209306
+    #     np.random.seed(0)
+    #     generados = np.random.randn(cantidad)
+    #     serie = pd.Series(generados)
+    #     df["random_g"] = serie
+    #     df.to_csv("dataset_nuevo.csv")
+    #     #plt.figure()
+    #     df["num_units"].plot(kind = 'barh')
+    #     #print(df["random_g"].describe())
+    #     #plt.show()
+    #     plt.savefig("grafico_normal_2_line.png")
+    #     #plt.legend(loc='datos aleatorios')
     
-    def grafico_df_xy(self,df):
-        if "random_g" not in df.columns:
-            np.random.seed(0)
-            df["random_g"] = np.random.randn(len(df))
+    # def grafico_df_xy(self,df):
+    #     if "random_g" not in df.columns:
+    #         np.random.seed(0)
+    #         df["random_g"] = np.random.randn(len(df))
         
-        # Definir las columnas que se quieren graficar
-        columnas = ["crash_month", "random_g"]
+    #     # Definir las columnas que se quieren graficar
+    #     columnas = ["crash_month", "random_g"]
         
-        # (Opcional) Si deseas reiniciar el índice de df:
-        df.reset_index(drop=True, inplace=True)
+    #     # (Opcional) Si deseas reiniciar el índice de df:
+    #     df.reset_index(drop=True, inplace=True)
         
-        # Seleccionar las columnas y graficar
-        df1 = df[columnas]
-        df1.plot()
-        plt.xlabel("Índice")
-        plt.title("Gráfico de crash_month y random_g")
-        plt.savefig("grafico_normal_3.png")
-        plt.show()
+    #     # Seleccionar las columnas y graficar
+    #     df1 = df[columnas]
+    #     df1.plot()
+    #     plt.xlabel("Índice")
+    #     plt.title("Gráfico de crash_month y random_g")
+    #     plt.savefig("grafico_normal_3.png")
+    #     plt.show()
     
-    def graficos_agrupados(self,df = pd.DataFrame(), lista_columnas=[]):
-        for col in lista_columnas:
-            conteo = df[col].value_counts().sort_index()
-            plt.figure()
-            conteo.plot(kind= "bar")
-            plt.xlabel(col)
-            plt.ylabel("cantidad")
-            plt.show()
+    # def graficos_agrupados(self,df = pd.DataFrame(), lista_columnas=[]):
+    #     for col in lista_columnas:
+    #         conteo = df[col].value_counts().sort_index()
+    #         plt.figure()
+    #         conteo.plot(kind= "bar")
+    #         plt.xlabel(col)
+    #         plt.ylabel("cantidad")
+    #         plt.show()
 
 # padclase = Pad_clase()          
 # dataset_path = padclase.download_dataset_zip()

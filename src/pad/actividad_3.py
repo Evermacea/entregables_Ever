@@ -19,7 +19,6 @@ class Actividad_3():
         self.df = padclase.create_csv(csv_dir)
       
     def ejercicio_1(self):
-        """ Captura el resultado del ejercicio 1 y lo guarda en Excel. """
         # Simulación de capturar el resultado desde el notebook
         datos1 = {
             'Granadilla': [20],
@@ -30,7 +29,6 @@ class Actividad_3():
         d1.to_csv(ruta_csv, index=False)
 
     def ejercicio_2(self):
-        # self.df.loc[1,'resultado']=len(self.df) + 1
         d2 =pd.DataFrame({
         'Granadilla': [20, 49],
         'Tomates': [50, 100]    
@@ -39,7 +37,6 @@ class Actividad_3():
         d2.to_csv(ruta_csv, index=False)
 
     def ejercicio_3(self):
-        # self.df.loc[2,'resultado']=len(self.df) + 2
         utensilios = pd.Series(
             ["3 unidades", "2 unidades", "4 unidades", "5 unidades"],
             index=["Cuchara", "Tenedor", "Cuchillo", "Plato"],
