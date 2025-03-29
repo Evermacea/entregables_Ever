@@ -47,6 +47,7 @@ class Pad_clase:
         os.makedirs('src/static/csv', exist_ok=True)
 
         csv_files = [f for f in os.listdir(csv_dir) if f.endswith('.csv')]
+        print(f"Archivos CSV encontrados: {csv_files}")
 
         if not csv_files:
             raise FileNotFoundError("No se encontraron archivos CSV en el directorio extraído")
@@ -59,6 +60,7 @@ class Pad_clase:
 
             try:
                 df = pd.read_csv(file_path, encoding="utf-8")
+                print(f"Primeras filas del archivo {file}:\n{df.head()}")  # Imprime las primeras filas
                 df_list.append(df)  # Guardamos el DataFrame en la lista
                 print(f"CSV cargado correctamente: {file}")
             except Exception as e:
@@ -68,9 +70,10 @@ class Pad_clase:
             raise ValueError("No se pudo cargar ningún archivo CSV correctamente")
 
         df_final = pd.concat(df_list, ignore_index=True)  # Unimos todos los CSVs en uno solo
-        print("CSVs combinados correctamente")
+        print(f"CSVs combinados correctamente, tamaño final: {df_final.shape}")
 
         return df_final  # Retornamos el DataFrame consolidado
+
 
     
     def grafico_normal(self,df):
