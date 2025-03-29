@@ -26,6 +26,8 @@ jobs:
         run: pip install --upgrade pip
       - name: paso4 - instalar dependencias
         run: pip install -e .
+      - name: Configurar Python con UTF-8
+        run: chcp 65001
       - name: paso5 - Ejecutar Actividad 1
         run: python src/pad/actividad_1.py
       - name: paso6 - Ejecutar Actividad 2
