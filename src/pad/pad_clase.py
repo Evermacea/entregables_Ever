@@ -15,7 +15,7 @@ import numpy as np
 class Pad_clase:
     def __init__(self):
         pass
-        # sys.stdout.reconfigure(encoding='utf-8') 
+        sys.stdout.reconfigure(encoding='utf-8') 
         
     def download_dataset_zip(self):
         print("Descargando dataset desde Kaggle...")
