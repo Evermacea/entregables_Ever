@@ -7,15 +7,14 @@ import plotly.express as px
 matplotlib.use('Agg') 
 import matplotlib.pyplot as plt
 import tkinter
-import sys # Importamos la libreria sys
-# tkinter._test()
+import sys 
 import numpy as np
 
 
 class Pad_clase:
     def __init__(self):
         pass
-        sys.stdout.reconfigure(encoding='utf-8') 
+        sys.stdout.reconfigure(encoding='utf-8')  # Forzar UTF-8 en la salida
         
     def download_dataset_zip(self):
         print("Descargando dataset desde Kaggle...")
@@ -23,7 +22,7 @@ class Pad_clase:
         print("Ruta al dataset:", dataset_path)
         return dataset_path
     
-    def extract_zip_files(self,dataset_path):
+    def extract_zip_files(self, dataset_path):
         zip_files = [f for f in os.listdir(dataset_path) if f.endswith('.zip')]
         if zip_files:
             zip_file = os.path.join(dataset_path, zip_files[0])
@@ -34,7 +33,6 @@ class Pad_clase:
                 z.extractall(extract_dir)
             return extract_dir
         else:
-            # Si no se encuentra un ZIP, se verifica si existen archivos CSV en la ruta
             csv_files = [f for f in os.listdir(dataset_path) if f.endswith('.csv')]
             if csv_files:
                 print("No se encontró archivo ZIP pero se detectaron archivos CSV; se asume que el dataset ya se encuentra extraído.")
@@ -44,6 +42,7 @@ class Pad_clase:
     
 
     def create_csv(self, csv_dir):
+        sys.stdout.reconfigure(encoding='utf-8')  # Forzar UTF-8 en la salida
         os.makedirs('src/static/csv', exist_ok=True)
 
         csv_files = [f for f in os.listdir(csv_dir) if f.endswith('.csv')]
@@ -52,7 +51,7 @@ class Pad_clase:
         if not csv_files:
             raise FileNotFoundError("No se encontraron archivos CSV en el directorio extraído")
 
-        df_list = []  # Lista para almacenar los DataFrames
+        df_list = []  
 
         for file in csv_files:
             file_path = os.path.join(csv_dir, file)
@@ -60,19 +59,20 @@ class Pad_clase:
 
             try:
                 df = pd.read_csv(file_path, encoding="utf-8")
-                print(f"Primeras filas del archivo {file}:{df.head()}")  # Imprime las primeras filas
-                df_list.append(df)  # Guardamos el DataFrame en la lista
+                print(f"Primeras filas del archivo {file}:{df.head()}")
+                df_list.append(df)  
                 print(f"CSV cargado correctamente: {file}")
             except Exception as e:
                 print(f"Error al leer {file}: {e}")
 
-        if not df_list:  # Si no se logró leer ningún archivo
+        if not df_list:  
             raise ValueError("No se pudo cargar ningún archivo CSV correctamente")
 
-        df_final = pd.concat(df_list, ignore_index=True)  # Unimos todos los CSVs en uno solo
+        df_final = pd.concat(df_list, ignore_index=True)  
         print(f"CSVs combinados correctamente, tamaño final: {df_final.shape}")
 
-        return df_final  # Retornamos el DataFrame consolidado
+        return df_final
+
 
 
     
