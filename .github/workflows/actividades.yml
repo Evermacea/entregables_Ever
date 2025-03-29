@@ -18,40 +18,36 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.9.2'
-      
+
+      - name: Configurar salida con UTF-8
+        run: |
+          chcp 65001
+          set PYTHONUTF8=1
+          echo "PYTHONUTF8=1" >> $GITHUB_ENV
+
       - name: paso1 - crea entorno virtual
         run: python -m venv venv
-      
+
       - name: paso2 - activar entorno virtual
-        run: ./venv/Scripts/activate   
-      
+        run: |
+          .\venv\Scripts\activate
+          set PYTHONUTF8=1
+
       - name: paso3 - actualizar pip
         run: pip install --upgrade pip
-      
+
       - name: paso4 - instalar dependencias
         run: pip install -e .
-      
-      - name: Configurar Python con UTF-8
-        run: chcp 65001
-      
-      - name: Configurar autenticación en Kaggle
-        run: |
-          mkdir -p ~/.kaggle
-          echo "${{ secrets.KAGGLE_JSON }}" > ~/.kaggle/kaggle.json
-          chmod 600 ~/.kaggle/kaggle.json
-      
+
       - name: paso5 - Ejecutar Actividad 1
         run: python src/pad/actividad_1.py
-      
+
       - name: paso6 - Ejecutar Actividad 2
         run: python src/pad/actividad_2.py
-      
-      - name: paso6 - Ejecutar Actividad 3
+
+      - name: paso7 - Ejecutar Actividad 3
         run: python src/pad/actividad_3.py
-      
-      - name: Pull latest changes
-        run: git pull origin main --rebase
-      
+
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
