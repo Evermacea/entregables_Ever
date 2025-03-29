@@ -20,7 +20,10 @@ jobs:
           python-version: '3.9.2'
 
       - name: Configurar salida con UTF-8
-        run: chcp 65001 && set PYTHONUTF8=1
+        run: |
+          chcp 65001
+          set PYTHONUTF8=1
+          echo "PYTHONUTF8=1" >> $GITHUB_ENV
 
       - name: paso1 - crea entorno virtual
         run: python -m venv venv
@@ -52,3 +55,4 @@ jobs:
           commit_user_name: Ever Macea [GitHub Actions]
           commit_user_email: ever.macea@est.iudigital.edu.co
           commit_author: Ever Macea <ever.macea@est.iudigital.edu.co>
+
