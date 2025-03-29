@@ -6,7 +6,7 @@ setup(
     author="Ever Macea",
     author_email="ever.macea@est.iudigital.edu.co",
     description="",
-    py_modules=["actividad_1", "actividad_2"],
+    py_modules=["actividad_1", "actividad_2","actividad_3"],
     install_requires=[
         "pandas",
         "matplotlib>=3.5.0",
