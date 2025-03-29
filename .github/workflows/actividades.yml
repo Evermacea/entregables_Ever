@@ -34,6 +34,12 @@ jobs:
       - name: Configurar Python con UTF-8
         run: chcp 65001
       
+      - name: Configurar autenticación en Kaggle
+        run: |
+          mkdir -p ~/.kaggle
+          echo "${{ secrets.KAGGLE_JSON }}" > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
+      
       - name: paso5 - Ejecutar Actividad 1
         run: python src/pad/actividad_1.py
       
@@ -53,5 +59,3 @@ jobs:
           commit_user_name: Ever Macea [GitHub Actions]
           commit_user_email: ever.macea@est.iudigital.edu.co
           commit_author: Ever Macea <ever.macea@est.iudigital.edu.co>
-
-
