@@ -2,10 +2,12 @@
 import pandas as pd
 import numpy as np
 import os
+import sys # Importamos la libreria sys
 from pad_clase import Pad_clase
 
 class Actividad_3():
     def __init__(self):
+        sys.stdout.reconfigure(encoding='utf-8') 
         self.ruta_raiz = "src/pad"
         self.ruta_actividad_3 = "{}/actividad_3/".format(self.ruta_raiz)
         self.ruta_guardado = os.path.join(self.ruta_actividad_3, "resultados.xlsx")
