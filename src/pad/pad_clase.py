@@ -63,7 +63,7 @@ class Pad_clase:
                 df_list.append(df)  
                 print(f"CSV cargado correctamente: {file}")
             except Exception as e:
-                print(f"Error al leer {file}: {e}")
+                print(f"Error al leer {file}:{e}")
 
         if not df_list:  
             raise ValueError("No se pudo cargar ningún archivo CSV correctamente")
