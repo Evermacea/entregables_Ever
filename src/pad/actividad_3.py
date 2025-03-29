@@ -8,9 +8,10 @@ from pad_clase import Pad_clase
 class Actividad_3():
     def __init__(self):
         sys.stdout.reconfigure(encoding='utf-8') 
+        print(f"Codificación activa: {sys.stdout.encoding}")
         self.ruta_raiz = "src/pad"
         self.ruta_actividad_3 = "{}/actividad_3/".format(self.ruta_raiz)
-        self.ruta_guardado = os.path.join(self.ruta_actividad_3, "resultados.xlsx")
+        # self.ruta_guardado = os.path.join(self.ruta_actividad_3, "resultados.xlsx")
         os.makedirs(self.ruta_actividad_3, exist_ok=True)
         # Importar la función de la clase para extraer la base de datos de Kaggle
         padclase = Pad_clase()          
@@ -48,7 +49,7 @@ class Actividad_3():
     def ejercicio_4(self): # Este ejercicio me generó problemas por ser la base de datos tan grande, lo que hice fue dividirlo en archivos csv más pequeños para poder guardar por partes toda la base de datos
         ruta_csv = os.path.join(self.ruta_actividad_3, "ejercicio4.csv")
         self.df.to_csv(ruta_csv, index=False) # Guardar el dataset completo en un CSV
-        print(f"Archivo guardado en: {ruta_csv}")
+        # print(f"Archivo guardado en: {ruta_csv}")
 
         # Si el dataset tiene más de 50,000 filas, lo dividimos en partes más pequeñas
         if self.df.shape[0] > 50000:
@@ -56,7 +57,7 @@ class Actividad_3():
             for i, chunk in enumerate(pd.read_csv(ruta_csv, chunksize=chunk_size)):
                 ruta_parte = os.path.join(self.ruta_actividad_3, f"ejercicio4_part{i+1}.csv")
                 chunk.to_csv(ruta_parte, index=False)
-                print(f"Guardado: {ruta_parte}")
+                # print(f"Guardado: {ruta_parte}")
 
 
     def ejercicio_5(self):
@@ -66,7 +67,7 @@ class Actividad_3():
     def ejercicio_6(self):
         self.df.info()
         num_entradas = self.df.shape[0]
-        print(f"El DataFrame tiene {num_entradas} entradas.")
+        # print(f"El DataFrame tiene {num_entradas} entradas.")
         ruta_csv = os.path.join(self.ruta_actividad_3, "ejercicio6.csv")
         df_info = pd.DataFrame({"Número de entradas": [num_entradas]})
         df_info.to_csv(ruta_csv, index=False)
@@ -90,15 +91,20 @@ class Actividad_3():
         Vinos_california.to_csv(ruta_csv, index=False)
     
     def ejercicio_10(self):
-        indice_mas_caro = self.df['price'].idxmax() # Índice del vino con el precio más alto
-        vino_mas_caro = self.df.loc[indice_mas_caro] # Información del vino más caro
-        # Mostrar el resultado
-        print("El vino más caro de California es:")
-        print(vino_mas_caro)
+        # Filtrar solo los vinos de California
+        df_california = self.df[self.df["province"].str.lower() == "california"].dropna(subset=["price"])
+        if df_california.empty:
+            # print("No se encontraron vinos de California en el dataset.")
+            return
 
-        # Guardar la información en un CSV
-        ruta_csv = os.path.join(self.ruta_actividad_3, "ejercicio10.csv")
+        indice_mas_caro = df_california["price"].idxmax() # Índice del vino más caro dentro de California
+        vino_mas_caro = df_california.loc[indice_mas_caro]
+        # Mostrar el resultado
+        # print("El vino más caro de California es:")
+        # print(vino_mas_caro)
+        ruta_csv = os.path.join(self.ruta_actividad_3, "ejercicio10.csv") # Guardar la información en un CSV
         vino_mas_caro.to_frame().T.to_csv(ruta_csv, index=False)
+
     
     def ejercicio_11(self):
         Vinos_california = self.df[self.df['country']=='US']
