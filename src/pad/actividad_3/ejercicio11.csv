@@ -13,41 +13,41 @@ Cabernet Franc,2014
 Viognier,1746
 Pinot Gris,1720
 Petite Sirah,1625
-RosÃ©,1603
+Rosé,1603
 Sparkling Blend,1325
 White Blend,1305
-RhÃ´ne-style Red Blend,1259
+Rhône-style Red Blend,1259
 Sangiovese,1039
 Malbec,952
 Grenache,930
-GewÃ¼rztraminer,862
+Gewürztraminer,862
 Pinot Grigio,831
 Tempranillo,676
 Meritage,558
 Barbera,493
-RhÃ´ne-style White Blend,445
+Rhône-style White Blend,445
 Pinot Blanc,420
-MourvÃ¨dre,374
+Mourvèdre,374
 Petit Verdot,368
 Roussanne,315
 Chenin Blanc,265
 G-S-M,236
-SÃ©millon,224
-AlbariÃ±o,220
+Sémillon,224
+Albariño,220
 Moscato,204
 Primitivo,203
 Grenache Blanc,185
 Port,174
 Cabernet Blend,173
-FumÃ© Blanc,172
+Fumé Blanc,172
 Champagne Blend,164
 Shiraz,164
 Cabernet Sauvignon-Syrah,150
-GrÃ¼ner Veltliner,139
+Grüner Veltliner,139
 Dolcetto,112
 Nebbiolo,102
 Muscat Canelli,91
-CarmenÃ¨re,89
+Carmenère,89
 Cabernet Sauvignon-Merlot,88
 Semillon-Sauvignon Blanc,87
 Tannat,87
@@ -89,9 +89,9 @@ Merlot-Cabernet Franc,29
 Teroldego,29
 Counoise,28
 Tocai Friulano,28
-MÃ¼ller-Thurgau,26
+Müller-Thurgau,26
 Petit Manseng,26
-BlaufrÃ¤nkisch,26
+Blaufränkisch,26
 Arneis,26
 Aglianico,26
 Chardonnay-Viognier,26
@@ -108,7 +108,7 @@ Colombard,21
 Traminette,21
 Carignan,20
 Garnacha,20
-AligotÃ©,20
+Aligoté,20
 Auxerrois,19
 Chenin Blanc-Viognier,19
 Cabernet-Syrah,14
@@ -120,7 +120,7 @@ Mission,14
 Tempranillo Blend,14
 Alicante Bouschet,13
 Merlot-Cabernet,12
-Syrah-MourvÃ¨dre,12
+Syrah-Mourvèdre,12
 Semillon-Chardonnay,12
 Dornfelder,11
 Monastrell,11
@@ -130,16 +130,16 @@ Syrah-Tempranillo,10
 Fiano,10
 Mataro,10
 Sangiovese-Cabernet Sauvignon,9
-ValdiguiÃ©,9
+Valdiguié,9
 Sangiovese-Syrah,9
 Picpoul,9
 Cabernet,8
-TorrontÃ©s,8
+Torrontés,8
 Cortese,8
 Scheurebe,8
 Muskat Ottonel,8
 Pinot-Chardonnay,7
-Grenache-MourvÃ¨dre,7
+Grenache-Mourvèdre,7
 Syrah-Cabernet Franc,7
 Viognier-Marsanne,7
 Malbec-Merlot,7
@@ -151,7 +151,7 @@ Nero d'Avola,6
 Black Monukka,6
 Blanc du Bois,6
 Traminer,6
-Chardonnay-AlbariÃ±o,6
+Chardonnay-Albariño,6
 Edelzwicker,6
 Chardonnay-Semillon,6
 Saperavi,6
@@ -159,8 +159,8 @@ Roussanne-Marsanne,5
 Angevine,5
 Sauvignon Gris,5
 Siegerrebe,5
-GewÃ¼rztraminer-Riesling,5
-Cabernet Sauvignon-CarmenÃ¨re,5
+Gewürztraminer-Riesling,5
+Cabernet Sauvignon-Carmenère,5
 Sangiovese Cabernet,5
 Gamay,5
 Debit,5
@@ -188,7 +188,7 @@ Shiraz-Cabernet Sauvignon,3
 Souzao,3
 Sylvaner,3
 Melon,3
-AlvarelhÃ£o,3
+Alvarelhão,3
 Cabernet Pfeffer,3
 Viognier-Grenache Blanc,3
 Mondeuse,3
@@ -209,14 +209,14 @@ Merlot-Petite Verdot,2
 Pinot Grigio-Sauvignon Blanc,2
 Muscat d'Alexandrie,2
 Negroamaro,2
-MourvÃ¨dre-Syrah,2
+Mourvèdre-Syrah,2
 Merlot-Syrah,2
 Merlot-Malbec,2
 St. Vincent,2
 Madeira Blend,2
-MarÃ©chal Foch,2
+Maréchal Foch,2
 Falanghina,2
-Sauvignon MusquÃ©,2
+Sauvignon Musqué,2
 Tempranillo-Garnacha,2
 Marquette,2
 Ribolla Gialla,2
@@ -227,12 +227,12 @@ Sangiovese Grosso,2
 Grenache-Shiraz,2
 Muscat Hamburg,2
 Muscadine,2
-Viognier-GewÃ¼rztraminer,2
-Viognier-ValdiguiÃ©,2
+Viognier-Gewürztraminer,2
+Viognier-Valdiguié,2
 Shiraz-Viognier,2
 Pinot Auxerrois,2
 Sauvignon Blanc-Chenin Blanc,1
-Pinot Gris-GewÃ¼rztraminer,1
+Pinot Gris-Gewürztraminer,1
 Palomino,1
 Pinot Blanc-Pinot Noir,1
 Syrah-Petit Verdot,1
@@ -261,7 +261,7 @@ Tannat-Syrah,1
 Chardonnay-Pinot Blanc,1
 Prosecco,1
 Tempranillo-Malbec,1
-Muscat Blanc Ã  Petits Grains,1
+Muscat Blanc à Petits Grains,1
 Pinot Grigio-Chardonnay,1
 Chardonelle,1
 Chardonnay-Pinot Gris,1

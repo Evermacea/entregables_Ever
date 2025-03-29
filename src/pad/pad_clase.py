@@ -58,17 +58,17 @@ class Pad_clase:
             print(f"Leyendo {file_path}...")
 
             try:
-                df = pd.read_csv(file_path, encoding="latin1")
+                df = pd.read_csv(file_path, encoding="utf-8")
                 df_list.append(df)  # Guardamos el DataFrame en la lista
-                print(f"✅ CSV cargado correctamente: {file}")
+                print(f"CSV cargado correctamente: {file}")
             except Exception as e:
-                print(f"❌ Error al leer {file}: {e}")
+                print(f"Error al leer {file}: {e}")
 
         if not df_list:  # Si no se logró leer ningún archivo
             raise ValueError("No se pudo cargar ningún archivo CSV correctamente")
 
         df_final = pd.concat(df_list, ignore_index=True)  # Unimos todos los CSVs en uno solo
-        print("✅ CSVs combinados correctamente")
+        print("CSVs combinados correctamente")
 
         return df_final  # Retornamos el DataFrame consolidado
 
