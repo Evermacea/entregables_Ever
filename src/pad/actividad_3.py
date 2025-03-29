@@ -94,7 +94,7 @@ class Actividad_3():
         indice_mas_caro = self.df['price'].idxmax() # Índice del vino con el precio más alto
         vino_mas_caro = self.df.loc[indice_mas_caro] # Información del vino más caro
         # Mostrar el resultado
-        print("🍷 El vino más caro de California es:")
+        print("El vino más caro de California es:")
         print(vino_mas_caro)
 
         # Guardar la información en un CSV
