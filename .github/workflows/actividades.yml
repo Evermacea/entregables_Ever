@@ -48,10 +48,17 @@ jobs:
       - name: paso7 - Ejecutar Actividad 3
         run: python src/pad/actividad_3.py
 
+      - name: Pull latest changes before commit
+        run: git pull origin main --rebase
+
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Entregas actividades
+          commit_user_name: Ever Macea [GitHub Actions]
+          commit_user_email: ever.macea@est.iudigital.edu.co
+          commit_author: Ever Macea <ever.macea@est.iudigital.edu.co>
+
           commit_user_name: Ever Macea [GitHub Actions]
           commit_user_email: ever.macea@est.iudigital.edu.co
           commit_author: Ever Macea <ever.macea@est.iudigital.edu.co>
