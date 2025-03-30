@@ -180,3 +180,6 @@ src/pad/static/json/*.json  #Esto es para ignorar el archivo json que se crea au
 
 # Distribution / packaging
 #.Pythonsrc/pad/actividad_2/grafico_dispersion_ejercicio_11.png
+
+src/pad/actividad_2/resultados.xlsx
+src/pad/actividad_3/*.csv
